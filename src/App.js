@@ -1,16 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AddUser from './component/AddUser';
 import UsersList from './component/UserList';
 
 function App() {
-	const users = [
+	const DEFAULT_USERS = [
 		{id: 1, name: 'Max', age: 31},
 		{id: 2, name: 'Aimé', age: 24},
 		{id: 3, name: 'Laurence', age: 55},
 	];
+
+	const [users, setUsers] = useState(DEFAULT_USERS);
+	const newUserHandler = (newUser) => {
+		setUsers((prevUsers) => [newUser, ...prevUsers]);
+	};
 	return (
 		<div>
-			<AddUser />
+			<AddUser usersData={users} onNewUserSubmit={newUserHandler} />
 			<UsersList usersData={users} />
 		</div>
 	);

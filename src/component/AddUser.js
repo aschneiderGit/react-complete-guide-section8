@@ -7,7 +7,12 @@ function AddUser(props) {
 	const addUserHandler = (event) => {
 		event.preventDefault();
 		if (usernameValue.length > 0 && ageValue > 0) {
-			console.log(usernameValue + ageValue);
+			const newUser = {
+				id: Date.now(),
+				name: usernameValue,
+				age: ageValue,
+			};
+			props.onNewUserSubmit(newUser);
 			setAgeValue('');
 			setUsernameValue('');
 		}

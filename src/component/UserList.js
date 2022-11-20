@@ -5,7 +5,7 @@ function UsersList(props) {
 	return (
 		<li className={style['user-list']}>
 			{props.usersData.map((user) => (
-				<User name={user.name} age={user.age} />
+				<User key={user.id} name={user.name} age={user.age} />
 			))}
 		</li>
 	);
