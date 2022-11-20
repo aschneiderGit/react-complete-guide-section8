@@ -1,4 +1,5 @@
 import React from 'react';
+import AddUser from './component/AddUser';
 import UsersList from './component/UserList';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 	];
 	return (
 		<div>
+			<AddUser />
 			<UsersList usersData={users} />
 		</div>
 	);
