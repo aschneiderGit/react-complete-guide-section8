@@ -1,0 +1,11 @@
+.user {
+	height: 30px;
+	list-style: none;
+	border: 1px black solid;
+	display: flex;
+	padding: 0px;
+}
+
+.user div {
+	margin: auto 10px;
+}

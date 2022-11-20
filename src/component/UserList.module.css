@@ -1,0 +1,8 @@
+.user-list {
+	list-style: none;
+	background: white;
+	border-radius: 7px;
+	width: 45%;
+	margin: auto;
+	padding: 1px 15px;
+}
