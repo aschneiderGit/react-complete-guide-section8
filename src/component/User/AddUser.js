@@ -25,6 +25,11 @@ function AddUser(props) {
 				age: ageValue,
 			};
 			props.onNewUserSubmit(newUser);
+			// be careful when we use REf to change value of the DOM
+			// We prefer to only read attribut with ref not write it
+			// here we don't a the choice (without useState)
+			nameInputRef.current.value = '';
+			ageInputRef.current.value = '';
 		}
 	};
 
