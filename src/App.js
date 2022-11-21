@@ -14,10 +14,11 @@ function App() {
 		setUsers((prevUsers) => [newUser, ...prevUsers]);
 	};
 	return (
-		<div>
+		// React.Fragment can be call with empty <> </>
+		<React.Fragment>
 			<AddUser usersData={users} onNewUserSubmit={newUserHandler} />
 			<UsersList usersData={users} />
-		</div>
+		</React.Fragment>
 	);
 }
 
