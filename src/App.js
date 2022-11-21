@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import AddUser from './component/AddUser';
-import UsersList from './component/UserList';
+import AddUser from './component/User/AddUser';
+import UsersList from './component/User/UserList';
 
 function App() {
 	const DEFAULT_USERS = [
